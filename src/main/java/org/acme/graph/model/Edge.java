@@ -26,6 +26,10 @@ public class Edge {
 	public Edge() {
 
 	}
+	
+	public Edge(Vertex source, Vertex target) {
+		
+	}
 
 	public String getId() {
 		return id;
