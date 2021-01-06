@@ -1,6 +1,7 @@
 package org.acme.graph.routing;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -56,7 +57,7 @@ public class DijkstraPathFinder {
 	 */
 	private void visit(Vertex vertex) {
 		log.trace("visit({})", vertex);
-		List<Edge> outEdges = findOutEdges(vertex);
+		Collection<Edge> outEdges = vertex.getOutEdge();
 		/*
 		 * On étudie chacun des arcs sortant pour atteindre de nouveaux sommets ou
 		 * mettre à jour des sommets déjà atteint si on trouve un meilleur coût
