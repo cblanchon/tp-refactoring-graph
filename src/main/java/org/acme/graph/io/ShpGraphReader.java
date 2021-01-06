@@ -62,15 +62,11 @@ public class ShpGraphReader {
 				/* Création de l'arc pour le parcours en sens direct */
 				Edge directEdge = new Edge(source, target);
 				directEdge.setId(id + "-direct");
-				directEdge.setSource(source);
-				directEdge.setTarget(target);
 				graph.getEdges().add(directEdge);
 
 				/* Création de l'arc pour le parcours en sens opposé */
 				Edge reverseEdge = new Edge(source, target);
 				reverseEdge.setId(id + "-reverse");
-				reverseEdge.setSource(target);
-				reverseEdge.setTarget(source);
 				graph.getEdges().add(reverseEdge);
 			}
 		}
